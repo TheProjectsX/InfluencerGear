@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Influencer Gear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -30,18 +37,18 @@
       </nav>
 
       <!-- This Nav will be shown, when The site is in Mobile View -->
-      <nav class="toggle-nav" style="display: none">
-        <div class="shown-section">
-          <button>
-            <img src="assets/icons/hamburger-menu.svg" alt="Hamburger Menu" />
-          </button>
+      <nav class="toggle-nav">
+        <label for="ham-menu-opener" class="ham-label">
+          <img src="assets/icons/hamburger-menu.svg" alt="Hamburger Menu" />
+        </label>
+        <input type="checkbox" id="ham-menu-opener" hidden />
 
-          <h1 class="page-title">Influencer Products</h1>
+        <h1 class="page-title">Influencer Products</h1>
 
-          <a href="#"
-            ><img src="assets/icons/shopping-cart.svg" alt="Cart Icon"
-          /></a>
-        </div>
+        <a href="#" class="cart-icon"
+          ><img src="assets/icons/shopping-cart.svg" alt="Cart Icon"
+        /></a>
+
         <div class="toggle-section">
           <ul class="nav-links">
             <li><a href="#">Home</a></li>
@@ -50,8 +57,9 @@
             <li><a href="#">Log In</a></li>
             <li>
               <a href="#"
-                ><img src="assets/icons/search.svg" alt="Search Icon"
-              /></a>
+                ><img src="assets/icons/search.svg" alt="Search Icon" />
+                Search</a
+              >
             </li>
           </ul>
         </div>
@@ -88,18 +96,18 @@
         <img src="assets/logos/Target.svg" alt="Target Logo" />
       </section>
 
-      <!-- Popular Collection -->
+      <!-- Popular Collections -->
       <section class="popular-collections">
         <h3 class="section-title">Popular Collections</h3>
         <!-- Emmit Code for bottom Items Gen -->
-        <!-- div.collection-items-container>div.collection-item*9>img[alt="Item Image"]+h4.item-title+p.item-price+div>div>img[src="assets/icons/star-full.svg" alt="Rating"]*4+img[src="assets/icons/star-half.svg" alt="Rating"]^p.item-rating{4.99}^p.item-desc{Worldwide Shifting Available}+p{Buyers Protection Possible!} -->
+        <!-- div.collection-items-container>div.collection-item*9>img[alt="Item Image"]+h4.item-title+p.item-price+div.item-ratings>div>img[src="assets/icons/star-full.svg" alt="Rating"]*4+img[src="assets/icons/star-half.svg" alt="Rating"]^p{4.99}^p.item-desc{Worldwide Shifting Available}+p.item-desc{Buyers Protection Possible!} -->
 
         <div class="collection-items-container">
           <div class="collection-item">
             <img src="assets/tripod.png" alt="Item Image" />
             <h4 class="item-title">Flex Tripod</h4>
             <p class="item-price">$50.48</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -109,16 +117,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/mic.png" alt="Item Image" />
             <h4 class="item-title">Microphone</h4>
             <p class="item-price">$120.25</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -128,16 +136,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/airpod.png" alt="Item Image" />
             <h4 class="item-title">Aidpods</h4>
             <p class="item-price">$100.00</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -147,16 +155,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/drone.png" alt="Item Image" />
             <h4 class="item-title">Drone</h4>
             <p class="item-price">$980.25</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -166,16 +174,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/lights.png" alt="Item Image" />
             <h4 class="item-title">Light Setup</h4>
             <p class="item-price">$1200.00</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -185,16 +193,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/setup.png" alt="Item Image" />
             <h4 class="item-title">Photoshoot Set</h4>
             <p class="item-price">$820.40</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -204,16 +212,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/camera.png" alt="Item Image" />
             <h4 class="item-title">Vlogging Camera</h4>
             <p class="item-price">$1800.80</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -223,16 +231,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/green-screen.png" alt="Item Image" />
             <h4 class="item-title">Green Screen</h4>
             <p class="item-price">$25.48</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -242,16 +250,16 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
           <div class="collection-item">
             <img src="assets/action.png" alt="Item Image" />
             <h4 class="item-title">Action Camera</h4>
             <p class="item-price">$380.00</p>
-            <div>
+            <div class="item-ratings">
               <div>
                 <img src="assets/icons/star-full.svg" alt="Rating" /><img
                   src="assets/icons/star-full.svg"
@@ -261,10 +269,10 @@
                   alt="Rating"
                 /><img src="assets/icons/star-half.svg" alt="Rating" />
               </div>
-              <p class="item-rating">4.99</p>
+              <p>4.99</p>
             </div>
             <p class="item-desc">Worldwide Shifting Available</p>
-            <p>Buyers Protection Possible!</p>
+            <p class="item-desc">Buyers Protection Possible!</p>
           </div>
         </div>
 
